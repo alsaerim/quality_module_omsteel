@@ -1,0 +1,17 @@
+[
+  {
+  "doctype": "Custom Field",
+  "dt": "Sales Order",
+  "module": "Quality Module OMSteel",
+  "name": "quality_m_sales_order_no_a_001",
+  "fieldname": "quality_m_sales_order_no_a_001",
+  "fieldtype": "Link",
+  "label": "Quality Certificate",
+  "options": "Quality Certificate",
+  "insert_after": "order_type",
+  "allow_on_submit": 0,
+  "read_only": 1,
+  "mandatory": 0,
+  "sync_on_migrate": 1
+  }
+]

@@ -242,3 +242,37 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+
+
+
+
+# ================================  Adding =====================================
+
+
+
+doc_events = {
+    # "Purchase Invoice": {
+    #     "validate": [
+    #         "payment_entry_test_001.payment_entry_test_001.payment_entry_py.update_expense_account_on_return_purchase",
+    #     ],
+    # },
+}
+
+
+doctype_js = {
+    # "Sales Invoice": ["public/js/payment_entry_js.js", "public/js/branch_warehouse.js"],
+    # "Sales Order": ["public/js/payment_entry_js.js", "public/js/branch_warehouse.js"],
+}
+
+
+doctype_list_js = {
+    # "Sales Invoice": "public/js/payment_entry_js.js",
+}
+
+# Quality Module OMSteel
+
+# quality_certificate_js.js
+# quality_certificate_py
+
+
+fixtures = [{"dt": "Custom Field", "filters": [["module", "=", "Quality Module OMSteel"]]}]

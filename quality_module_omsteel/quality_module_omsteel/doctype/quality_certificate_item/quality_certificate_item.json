@@ -1,0 +1,196 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-02-27 16:15:09.871712",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "quality_m_thickness",
+  "quality_m_length",
+  "quality_m_qty",
+  "quality_m_bend_test",
+  "quality_m_standard",
+  "quality_m_steel_grade",
+  "column_break_ipuv",
+  "quality_m_item_code",
+  "quality_m_item_name",
+  "quality_m_lot_no",
+  "quality_m_heat_no",
+  "quality_m_size",
+  "section_break_apux",
+  "mechanical_properties_column",
+  "quality_m_ys_yield_strength_nmm2",
+  "quality_m_ts_tensile_strength_nmm2",
+  "quality_m_el_elongation_",
+  "chemical_composition_section",
+  "quality_m_s__sulfur",
+  "quality_m_cu__copper",
+  "quality_m_al__aluminum",
+  "column_break_ofup",
+  "quality_m_c__carbon",
+  "quality_m_si__silicon",
+  "quality_m_mn__manganese",
+  "quality_m_p__phosphorus"
+ ],
+ "fields": [
+  {
+   "fieldname": "quality_m_thickness",
+   "fieldtype": "Data",
+   "label": "quality_m_Thickness"
+  },
+  {
+   "fieldname": "quality_m_length",
+   "fieldtype": "Data",
+   "label": "quality_m_Length"
+  },
+  {
+   "fieldname": "quality_m_qty",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "quality_m_Qty"
+  },
+  {
+   "fieldname": "quality_m_bend_test",
+   "fieldtype": "Data",
+   "label": "quality_m_Bend Test"
+  },
+  {
+   "fieldname": "column_break_ipuv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "quality_m_item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "quality_m_Item Code",
+   "options": "Item"
+  },
+  {
+   "fieldname": "quality_m_item_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "quality_m_Item Name"
+  },
+  {
+   "fieldname": "quality_m_lot_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "quality_m_Lot No."
+  },
+  {
+   "fieldname": "quality_m_heat_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "quality_m_Heat No."
+  },
+  {
+   "fieldname": "quality_m_size",
+   "fieldtype": "Data",
+   "label": "quality_m_Size"
+  },
+  {
+   "fieldname": "quality_m_standard",
+   "fieldtype": "Data",
+   "label": "quality_m_Standard"
+  },
+  {
+   "fieldname": "quality_m_steel_grade",
+   "fieldtype": "Data",
+   "label": "quality_m_Steel Grade"
+  },
+  {
+   "fieldname": "section_break_apux",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "mechanical_properties_column",
+   "fieldtype": "Column Break",
+   "label": "Mechanical Properties"
+  },
+  {
+   "fieldname": "quality_m_el_elongation_",
+   "fieldtype": "Data",
+   "label": "quality_m_E.L. Elongation (%)"
+  },
+  {
+   "fieldname": "chemical_composition_section",
+   "fieldtype": "Section Break",
+   "label": "Chemical Composition"
+  },
+  {
+   "fieldname": "quality_m_s__sulfur",
+   "fieldtype": "Data",
+   "label": "quality_m_S % Sulfur"
+  },
+  {
+   "fieldname": "quality_m_cu__copper",
+   "fieldtype": "Data",
+   "label": "quality_m_Cu % Copper"
+  },
+  {
+   "fieldname": "quality_m_al__aluminum",
+   "fieldtype": "Data",
+   "label": "quality_m_Al % Aluminum"
+  },
+  {
+   "fieldname": "column_break_ofup",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "quality_m_c__carbon",
+   "fieldtype": "Data",
+   "label": "quality_m_C % Carbon"
+  },
+  {
+   "fieldname": "quality_m_si__silicon",
+   "fieldtype": "Data",
+   "label": "quality_m_Si % Silicon"
+  },
+  {
+   "fieldname": "quality_m_mn__manganese",
+   "fieldtype": "Data",
+   "label": "quality_m_Mn % Manganese"
+  },
+  {
+   "fieldname": "quality_m_p__phosphorus",
+   "fieldtype": "Data",
+   "label": "quality_m_P % Phosphorus"
+  },
+  {
+   "fieldname": "quality_m_ys_yield_strength_nmm2",
+   "fieldtype": "Data",
+   "label": "quality_m_Y.S. Yield Strength (N/mm\u00b2)"
+  },
+  {
+   "fieldname": "quality_m_ts_tensile_strength_nmm2",
+   "fieldtype": "Data",
+   "label": "quality_m_T.S. Tensile Strength (N/mm\u00b2)"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-02-27 17:03:28.189781",
+ "modified_by": "Administrator",
+ "module": "Quality Module OMSteel",
+ "name": "Quality Certificate Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
