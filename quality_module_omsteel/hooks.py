@@ -262,6 +262,7 @@ doc_events = {
 doctype_js = {
     # "Sales Invoice": ["public/js/payment_entry_js.js", "public/js/branch_warehouse.js"],
     # "Sales Order": ["public/js/payment_entry_js.js", "public/js/branch_warehouse.js"],
+    "Sales Order": "public/js/quality_certificate_js.js",
 }
 
 

@@ -1,0 +1,30 @@
+Source,Translated
+Quality Certificate,شهادة الجودة
+quality_m_Customer Name,اسم العميل
+quality_m_Delivery Note No,رقم إشعار الشحن
+quality_m_Invoice Date,تاريخ الفاتورة
+quality_m_Sales Order No,رقم امر البيع
+quality_m_Test Type,نوع الاختبار
+quality_m_Certificate Date,تاريخ الشهادة
+Quality Certificate Item Chield,جدول تفاصيل الباتش
+quality_m_Item Code,كودالصنف
+quality_m_Item Name,إسم الصنف
+quality_m_Lot No.,رقم الباتش
+quality_m_Heat No.,رقم الصب
+quality_m_Size,الابعاد
+quality_m_Thickness,السماكة
+quality_m_Length,الطول
+quality_m_Qty,عدد القطع
+quality_m_Bend Test,اختبار الثني
+quality_m_Standard,المواصفات
+quality_m_Steel Grade,درجة الحديد
+quality_m_Y.S. Yield Strength (N/mm²),مقاومة الخضوع (N/mm2)
+quality_m_T.S. Tensile Strength (N/mm²),مقاومة الشد (N/mm2)
+quality_m_E.L. Elongation (%),% نسبة الاستطالة 
+quality_m_C % Carbon,% كربون
+quality_m_Si % Silicon,% سيليكون
+quality_m_Mn % Manganese,% منجنيز
+quality_m_P % Phosphorus,% فوسفور
+quality_m_S % Sulfur,% كبريت
+quality_m_Cu % Copper,% نحاس
+quality_m_Al % Aluminum,% الومنيوم
