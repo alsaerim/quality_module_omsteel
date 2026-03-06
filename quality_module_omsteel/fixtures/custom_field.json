@@ -13,5 +13,19 @@
   "read_only": 1,
   "mandatory": 0,
   "sync_on_migrate": 1
+  },
+  {
+  "doctype": "Custom Field",
+  "dt": "Item",
+  "module": "Quality Module OMSteel",
+  "name": "size_quality_a_001",
+  "fieldname": "size_quality_a_001",
+  "fieldtype": "Data",
+  "label": "Size in 'Quality Certificate'",
+  "insert_after": "custom_thickness",
+  "allow_on_submit": 0,
+  "read_only": 0,
+  "mandatory": 0,
+  "sync_on_migrate": 1
   }
 ]
