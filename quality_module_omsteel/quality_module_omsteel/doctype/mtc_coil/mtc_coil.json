@@ -1,0 +1,191 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-11-07 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "pack_no",
+  "heat_no",
+  "item_code",
+  "weight_kg",
+  "grade",
+  "batch",
+  "chem_sb",
+  "c_carbon",
+  "si_silicon",
+  "mn_manganese",
+  "p_phosphorus",
+  "s_sulfur",
+  "als",
+  "alt",
+  "ni_nickel",
+  "cu_copper",
+  "mo_molybdenum",
+  "v_vanadium",
+  "nb_niobium",
+  "ti_titanium",
+  "n_nitrogen",
+  "cr_chromium",
+  "ceq"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "pack_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Pack No"
+  },
+  {
+   "columns": 2,
+   "fieldname": "heat_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Heat No"
+  },
+  {
+   "columns": 2,
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item Code",
+   "options": "Item"
+  },
+  {
+   "columns": 1,
+   "fieldname": "weight_kg",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Weight (kg)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "grade",
+   "fieldtype": "Data",
+   "label": "Grade"
+  },
+  {
+   "fieldname": "batch",
+   "fieldtype": "Link",
+   "label": "Batch",
+   "options": "Batch",
+   "read_only": 1
+  },
+  {
+   "fieldname": "chem_sb",
+   "fieldtype": "Section Break",
+   "label": "Chemical Composition"
+  },
+  {
+   "fieldname": "c_carbon",
+   "fieldtype": "Float",
+   "label": "C",
+   "precision": "4"
+  },
+  {
+   "fieldname": "si_silicon",
+   "fieldtype": "Float",
+   "label": "Si",
+   "precision": "4"
+  },
+  {
+   "fieldname": "mn_manganese",
+   "fieldtype": "Float",
+   "label": "Mn",
+   "precision": "4"
+  },
+  {
+   "fieldname": "p_phosphorus",
+   "fieldtype": "Float",
+   "label": "P",
+   "precision": "4"
+  },
+  {
+   "fieldname": "s_sulfur",
+   "fieldtype": "Float",
+   "label": "S",
+   "precision": "4"
+  },
+  {
+   "fieldname": "als",
+   "fieldtype": "Float",
+   "label": "Als",
+   "precision": "4"
+  },
+  {
+   "fieldname": "alt",
+   "fieldtype": "Float",
+   "label": "Alt",
+   "precision": "4"
+  },
+  {
+   "fieldname": "ni_nickel",
+   "fieldtype": "Float",
+   "label": "Ni",
+   "precision": "4"
+  },
+  {
+   "fieldname": "cu_copper",
+   "fieldtype": "Float",
+   "label": "Cu",
+   "precision": "4"
+  },
+  {
+   "fieldname": "mo_molybdenum",
+   "fieldtype": "Float",
+   "label": "Mo",
+   "precision": "4"
+  },
+  {
+   "fieldname": "v_vanadium",
+   "fieldtype": "Float",
+   "label": "V",
+   "precision": "4"
+  },
+  {
+   "fieldname": "nb_niobium",
+   "fieldtype": "Float",
+   "label": "Nb",
+   "precision": "4"
+  },
+  {
+   "fieldname": "ti_titanium",
+   "fieldtype": "Float",
+   "label": "Ti",
+   "precision": "4"
+  },
+  {
+   "fieldname": "n_nitrogen",
+   "fieldtype": "Float",
+   "label": "N",
+   "precision": "4"
+  },
+  {
+   "fieldname": "cr_chromium",
+   "fieldtype": "Float",
+   "label": "Cr",
+   "precision": "4"
+  },
+  {
+   "fieldname": "ceq",
+   "fieldtype": "Float",
+   "label": "Ceq",
+   "precision": "4"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-11-07 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Quality Module OMSteel",
+ "name": "MTC Coil",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

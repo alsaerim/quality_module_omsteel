@@ -1,0 +1,148 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "MTC-.YYYY.-.#####",
+ "creation": "2026-11-07 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_main",
+  "supplier",
+  "supplier_mtc_no",
+  "grade",
+  "specification",
+  "date_of_delivery",
+  "default_item",
+  "column_break_main",
+  "brand",
+  "manufacturer",
+  "total_weight",
+  "mtc_pdf",
+  "purchase_receipt",
+  "amended_from",
+  "section_break_items",
+  "coils"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_main",
+   "fieldtype": "Section Break",
+   "label": ""
+  },
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "label": "المورد",
+   "options": "Supplier",
+   "reqd": 1
+  },
+  {
+   "fieldname": "supplier_mtc_no",
+   "fieldtype": "Data",
+   "label": "رقم شهادة المورد"
+  },
+  {
+   "fieldname": "grade",
+   "fieldtype": "Data",
+   "label": "الدرجة"
+  },
+  {
+   "fieldname": "specification",
+   "fieldtype": "Data",
+   "label": "المواصفة"
+  },
+  {
+   "fieldname": "date_of_delivery",
+   "fieldtype": "Date",
+   "label": "تاريخ التسليم"
+  },
+  {
+   "fieldname": "default_item",
+   "fieldtype": "Link",
+   "label": "الصنف (المادة الخام)",
+   "options": "Item"
+  },
+  {
+   "fieldname": "column_break_main",
+   "fieldtype": "Column Break",
+   "label": ""
+  },
+  {
+   "fieldname": "brand",
+   "fieldtype": "Data",
+   "label": "البراند"
+  },
+  {
+   "fieldname": "manufacturer",
+   "fieldtype": "Data",
+   "label": "المصنع"
+  },
+  {
+   "fieldname": "total_weight",
+   "fieldtype": "Float",
+   "label": "الوزن الإجمالي (kg)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "mtc_pdf",
+   "fieldtype": "Attach",
+   "label": "ملف الـ PDF"
+  },
+  {
+   "fieldname": "purchase_receipt",
+   "fieldtype": "Link",
+   "label": "إيصال الشراء",
+   "options": "Purchase Receipt"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Mill Test Certificate",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "section_break_items",
+   "fieldtype": "Section Break",
+   "label": ""
+  },
+  {
+   "fieldname": "coils",
+   "fieldtype": "Table",
+   "label": "جدول اللفائف",
+   "options": "MTC Coil"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-11-07 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Quality Module OMSteel",
+ "name": "Mill Test Certificate",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
