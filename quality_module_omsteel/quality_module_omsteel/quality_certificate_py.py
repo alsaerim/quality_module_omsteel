@@ -31,22 +31,49 @@ DETAIL_MAP = {
 COIL_FIELDS = list(DETAIL_MAP.keys()) + list(CHEM_MAP.keys())
 
 
-def _get_item_batches(item):
-    """يُرجع [(batch_no, qty)] لصف صنف في أمر البيع.
-    يدعم batch_no المباشر و Serial and Batch Bundle (ERPNext 15)."""
-    batches = []
-    if item.get("batch_no"):
-        batches.append((item.get("batch_no"), item.get("qty") or 0))
-    elif item.get("serial_and_batch_bundle"):
-        entries = frappe.get_all(
+def _row_batches(row):
+    """يقرأ الـ Batch من صف مستند: batch_no المباشر أو Serial and Batch Bundle (v15)."""
+    out = []
+    if row.get("batch_no"):
+        out.append((row.get("batch_no"), abs(row.get("qty") or 0)))
+    elif row.get("serial_and_batch_bundle"):
+        for e in frappe.get_all(
             "Serial and Batch Entry",
-            filters={"parent": item.get("serial_and_batch_bundle")},
+            filters={"parent": row.get("serial_and_batch_bundle")},
             fields=["batch_no", "qty"],
-        )
-        for e in entries:
+        ):
             if e.batch_no:
-                batches.append((e.batch_no, abs(e.qty or 0)))
-    return batches
+                out.append((e.batch_no, abs(e.qty or 0)))
+    return out
+
+
+def _item_batches(so_name, item):
+    """يبحث عن الـ Batches للصنف: أمر البيع -> إشعار التسليم -> الفاتورة."""
+    # 1) من صف أمر البيع مباشرة
+    b = _row_batches(item)
+    if b:
+        return b
+
+    # 2) من إشعارات التسليم المرتبطة بأمر البيع
+    dn_rows = frappe.get_all(
+        "Delivery Note Item",
+        filters={"against_sales_order": so_name, "item_code": item.item_code},
+        fields=["batch_no", "serial_and_batch_bundle", "qty"],
+    )
+    for r in dn_rows:
+        b += _row_batches(frappe._dict(r))
+    if b:
+        return b
+
+    # 3) من فواتير البيع المرتبطة بأمر البيع
+    si_rows = frappe.get_all(
+        "Sales Invoice Item",
+        filters={"sales_order": so_name, "item_code": item.item_code},
+        fields=["batch_no", "serial_and_batch_bundle", "qty"],
+    )
+    for r in si_rows:
+        b += _row_batches(frappe._dict(r))
+    return b
 
 
 def _coil_data(batch_no):
@@ -61,7 +88,6 @@ def _coil_data(batch_no):
 def create_quality_certificate(sales_order):
     so = frappe.get_doc("Sales Order", sales_order)
 
-    # إشعار التسليم اختياري
     delivery_notes = frappe.get_all(
         "Delivery Note",
         filters={"against_sales_order": sales_order, "docstatus": 1},
@@ -82,10 +108,10 @@ def create_quality_certificate(sales_order):
         qc.quality_m_invoice_date = delivery_note.posting_date
 
     for item in so.items:
-        batches = _get_item_batches(item)
+        batches = _item_batches(so.name, item)
 
         if not batches:
-            # لا يوجد Batch على الصف: صف واحد بالكمية الكاملة دون تفاصيل الكويل
+            # لا يوجد Batch في أي مستند: صف واحد بالكمية الكاملة دون تفاصيل
             qc.append("quality_certificate_item_chield", {
                 "quality_m_item_code": item.item_code,
                 "quality_m_item_name": item.item_name,
@@ -93,7 +119,6 @@ def create_quality_certificate(sales_order):
             })
             continue
 
-        # صف لكل Batch (كويل) مع سحب كل تفاصيله تلقائياً من الـ MTC
         for batch_no, qty in batches:
             coil = _coil_data(batch_no)
             row = {
